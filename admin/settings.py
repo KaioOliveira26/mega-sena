@@ -24,6 +24,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
+    'usuario',
+    'mega_sena',
 ]
 
 MIDDLEWARE = [
