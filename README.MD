@@ -75,3 +75,29 @@ Rotas necessárias para API:
     - bs4
     - lxml
 
+# Rotas
+## URI/games/result/
+### BODY
+- No body
+### Response
+```json
+{
+  "concurso": "Concurso 2362 (14/04/21)",
+  "numeros": [
+    3,
+    20,
+    22,
+    32,
+    35,
+    50
+  ]
+}
+```
+## URI/games/game/
+## URI/games/result/
+## URI/games/result/
+## URI/games/result/
+## URI/games/result/
+## URI/games/result/
+## URI/games/result/
+## URI/games/result/
