@@ -1,7 +1,7 @@
 import jwt
 from django.contrib.auth.models import User
 
-def validate_token_user(token):
+def validate_token_user(header):
     jwt_options = {
             'verify_signature': False,
             'verify_exp': True,
@@ -11,7 +11,7 @@ def validate_token_user(token):
         }
 
     try:
-        decodedToken = jwt.decode(token,algorithms=["HS256"],options = jwt_options)
+        decodedToken = jwt.decode(header['auth-token'],algorithms=["HS256"],options = jwt_options)
     except:
         return {'response':'token de autentificação invalido ou não foi fornecido','status':400}
     
