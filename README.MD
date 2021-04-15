@@ -76,7 +76,76 @@ Rotas necessárias para API:
     - lxml
 
 # Rotas
+## USER
+## URI/user/create/
+- POST
+### BODY
+```json
+{
+	"username":"kaiooliveira",
+	"first_name":"Kaio Henrique",
+	"last_name":"Oliveira da Silva",
+	"email":"kaiohenrique2601@gmail.com",
+	"password":"1234"
+}
+```
+### Response
+```json
+{
+  "id": 9,
+  "username": "kaio26",
+  "first_name": "Kaio Henrique",
+  "last_name": "Oliveira da Silva",
+  "email": "kaiohenrique2601@gmail.com"
+}
+```
+## URI/user/
+- DELETE
+### BODY
+```json
+NO BODY
+```
+### Response
+```json
+204 NO CONTENT
+```
+## URI/login/
+- POST
+### BODY
+```json
+{
+	"username":"kaio26",
+	"password":"123456"
+}
+```
+### Response
+```json
+{
+  "refresh": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTYxODYwMTQ5OCwianRpIjoiYzZkODBhODBjZDljNGExOGEyNWViYjA0NmJlZGJiMzUiLCJ1c2VyX2lkIjoyfQ.bBOPnR6wvkNSeaDn9Iznl8dolvC-x3ngO18_N3apLL0",
+  "access": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE4NTE1Mzk4LCJqdGkiOiIxNTU3MTI3MjRkMWY0YWM4YjY3ZGRmNDIzYWQ1M2JiNiIsInVzZXJfaWQiOjJ9.vi8JJJY8FVPquK6UvYoGUhrj5vC6PpVYYxV4BuY4Pt0"
+} 
+```
+## URI/user/
+- PATCH
+### BODY
+```json
+{
+	"email":"kaiohenrique2601@outlook.com"
+}
+```
+### Response
+```json
+{
+  "id": 9,
+  "username": "kaio26",
+  "first_name": "Kaio Henrique",
+  "last_name": "Oliveira da Silva",
+  "email": "kaiohenrique2601@outlook.com"
+}
+```
+## GAMES
 ## URI/games/result/
+- GET
 ### BODY
 - No body
 ### Response
@@ -93,11 +162,7 @@ Rotas necessárias para API:
   ]
 }
 ```
-## URI/games/game/
-## URI/games/result/
-## URI/games/result/
-## URI/games/result/
-## URI/games/result/
+
 ## URI/games/result/
 ## URI/games/result/
 ## URI/games/result/
