@@ -76,6 +76,8 @@ Rotas necessárias para API:
     - lxml
 
 # Rotas
+- para testar a aplicação é recomendado a utilização do insomnia basta instalar e importar o arquivo Insomnia_2021-04-15
+
 ## USER
 ## URI/user/create/
 - POST
@@ -162,7 +164,99 @@ NO BODY
   ]
 }
 ```
+## URI/games/points/
+- GET
+### BODY
+- No body
+### Response
+```json
+{
+  "points": 0,
+  "game": {
+    "id": 3,
+    "numbers": "[9, 19, 24, 46, 54, 56]",
+    "date": "2021-04-15",
+    "user": {
+      "id": 2,
+      "username": "kaiosuper",
+      "first_name": "",
+      "last_name": "",
+      "email": ""
+    }
+  },
+  "concurse": "Concurso 2362 (14/04/21)",
+  "result_numbers": [
+    3,
+    20,
+    22,
+    32,
+    35,
+    50
+  ],
+  "game_numbers": [
+    9,
+    19,
+    24,
+    46,
+    54,
+    56
+  ]
+}
+```
+## URI/games/
+- GET
+### BODY
+- No body
+### Response
+```json
+[
+  {
+    "id": 1,
+    "numbers": "[14, 27, 35, 46, 58, 58]",
+    "date": "2021-04-15",
+    "user": {
+      "id": 1,
+      "username": "kaio",
+      "first_name": "",
+      "last_name": "",
+      "email": "kaiohenrique2601@outlook.com"
+    }
+  },
+  {
+    "id": 2,
+    "numbers": "[11, 14, 19, 41, 53, 55]",
+    "date": "2021-04-15",
+    "user": {
+      "id": 1,
+      "username": "kaio",
+      "first_name": "",
+      "last_name": "",
+      "email": "kaiohenrique2601@outlook.com"
+    }
+  }
+]
+```
+## URI/games/
+- GET
+### BODY
+```json
+{
+	"tens":6
+}
+```
 
-## URI/games/result/
-## URI/games/result/
-## URI/games/result/
+### Response
+```json
+{
+  "id": 4,
+  "numbers": "[6, 13, 30, 38, 40, 60]",
+  "date": "2021-04-15",
+  "user": {
+    "id": 2,
+    "username": "kaiosuper",
+    "first_name": "",
+    "last_name": "",
+    "email": ""
+  }
+}
+```
